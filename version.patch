@@ -1,5 +1,5 @@
---- minigzip.c	2017-01-01 01:37:10.000000000 -0600
-+++ minigzip-updated.c	2024-05-10 13:32:04.372079500 -0500
+--- minigzip.c	2024-05-10 16:08:52.871930200 -0500
++++ minigzip-updated.c	2024-05-10 22:39:14.062676500 -0500
 @@ -544,7 +544,8 @@
  
  
@@ -15,10 +15,10 @@
  
      while (argc > 0) {
 -      if (strcmp(*argv, "-c") == 0)
-+      if (strcmp(*argv, "-V") == 0)
-+        fprintf(stdout, "minigzip: %s\n", zlib_version)
++      if (strcmp(*argv, "-V") == 0) {
++        fprintf(stdout, "minigzip: %s\n", zlib_version);
 +        exit(1);
-+      else if (strcmp(*argv, "-c") == 0)
++      } else if (strcmp(*argv, "-c") == 0)
          copyout = 1;
        else if (strcmp(*argv, "-d") == 0)
          uncompr = 1;
