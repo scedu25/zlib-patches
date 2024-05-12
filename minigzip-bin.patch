@@ -1,0 +1,6 @@
+292a293
+> 	cp minigzip$(EXE) $(prefix)/bin/
+369c370
+< 	   example$(EXE) minigzip$(EXE) examplesh$(EXE) minigzipsh$(EXE) \
+---
+> 	   example$(EXE) minigzip$(EXE) $(prefix)/bin/minigzip$(EXE) examplesh$(EXE) minigzipsh$(EXE) \
