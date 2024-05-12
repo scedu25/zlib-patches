@@ -1,5 +1,5 @@
 292a293
-> 	cp minigzip$(EXE) $(prefix)/bin/
+> 	mkdir -p $(prefix)/bin && cp minigzip$(EXE) $(prefix)/bin
 369c370
 < 	   example$(EXE) minigzip$(EXE) examplesh$(EXE) minigzipsh$(EXE) \
 ---
